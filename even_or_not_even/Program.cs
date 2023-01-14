@@ -1,4 +1,4 @@
-﻿Console.Write("Привет! Введи число, а я скажу чётное оно или нет: ");
+﻿Console.Write("Привет! Введи число, а я скажу чётное ли оно: ");
 int number = int.Parse(Console.ReadLine()!);
 
 if (number % 2 == 0)
