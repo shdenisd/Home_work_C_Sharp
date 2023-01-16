@@ -10,3 +10,4 @@ else
     Console.WriteLine("Твоё число нечётно!");
 }
 
+Console.WriteLine("Test");
