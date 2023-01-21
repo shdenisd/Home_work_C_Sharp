@@ -6,7 +6,7 @@
 Console.Write("Введите число: ");
 int number = int.Parse(Console.ReadLine()!);
 
-if (number / 100 > 0)
+if (Math.Abs(number) / 100 > 0)
 {
     Console.WriteLine($"Третья цифра справа вашего число равна {number / 100 % 10}");
 }
