@@ -7,7 +7,7 @@
 Console.Clear();
 
 System.Console.Write("Введите любое число: ");
-int number = int.Parse(Console.ReadLine());
+int number = int.Parse(Console.ReadLine()!);
 
 System.Console.Write($"Кубы чисел от 1 до {number}:  ");
 
