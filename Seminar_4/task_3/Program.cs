@@ -43,6 +43,8 @@ int[] Create_Array(string numerals)
 }
 
 
+
+
 // Вариант 2, простой, через ", " последнее число без ",", как по условию.
  
 
@@ -69,15 +71,21 @@ int[] Create_Array_2(string numerals)
     return result;
 }
 
-System.Console.Write("Введите 8 цифр в одну строку: ");
+
+System.Console.Write("Введите 8 цифр в одну строку через запятую как угодно ");
 string number = Console.ReadLine()!;
 
+System.Console.Write("Введите 8 цифр в одну строку через запятую с пробелом: ");
+string number_2 = Console.ReadLine()!;
 
-//int[] array = Create_Array(number);
 
-int[] array_2 = Create_Array_2(number);
 
-//System.Console.WriteLine(String.Join(", ", array));
 
+int[] array = Create_Array(number);
+
+int[] array_2 = Create_Array_2(number_2);
+
+
+
+System.Console.WriteLine(String.Join(", ", array));
 System.Console.WriteLine(String.Join(", ", array_2));
-
