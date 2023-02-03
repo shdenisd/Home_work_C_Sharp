@@ -8,7 +8,7 @@
 
 
 
-// числа можно вводить как угодно, числом явлется слитная последовательность цифр.
+// числа можно вводить как угодно, числом явлется слитная последовательность подряд идущих цифр.
 
 int[] String_to_array(string numbers)
 {
@@ -30,7 +30,7 @@ int[] String_to_array(string numbers)
     count = 0;
     for (int i = 0; i < numbers.Length; i++)                        // в данном цикле создаем из введенных цифр массив
     {
-        if (Char.IsNumber(numbers[i]) || (numbers[i] == '-')) work_string += numbers[i];     // крашится если ввести например так  85-87, чё нить потом придумюа 
+        if (Char.IsNumber(numbers[i]) || (numbers[i] == '-')) work_string += numbers[i];     // крашится если ввести например так  "85-87" или так "-  53", чё нить потом придумюа 
         else
         {       
             if (work_string != string.Empty)
