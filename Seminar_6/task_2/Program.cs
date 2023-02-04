@@ -2,21 +2,37 @@
 
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
+int[] user_points()
+{
+    int[] points_array = new int[4]; 
+
+    System.Console.Write("Введите первую точку первовой прямой: ");
+    points_array[0] = int.Parse(Console.ReadLine()!);
+    System.Console.Write("Введите вторую точку первовой прямой: ");
+    points_array[1] = int.Parse(Console.ReadLine()!);
+
+    System.Console.Write("Введите первую точку второй прямой: ");
+    points_array[2] = int.Parse(Console.ReadLine()!);
+    System.Console.Write("Введите вторую точку второй прямой: ");
+    points_array[3] = int.Parse(Console.ReadLine()!);
+
+    
+    return points_array;
+}
+
+void intersection_points(int[] points_array)
+{
+    double b1 = points_array[0];
+    double k1 = points_array[1];
+    double b2 = points_array[2];
+    double k2 = points_array[3];
+    
+    double X = (b2 - b1) / (k1 - k2);
+    double Y = k1 * X + b1;
+    System.Console.WriteLine($"({X}; {Y})");
+}
 
 
-System.Console.Write("Введите первую точку первовой прямой: ");
-double b1 = int.Parse(Console.ReadLine()!);
-System.Console.Write("Введите вторую точку первовой прямой: ");
-double k1 = int.Parse(Console.ReadLine()!);
+int[] points_array = user_points();
+intersection_points(points_array);
 
-System.Console.Write("Введите первую точку второй прямой: ");
-double b2 = int.Parse(Console.ReadLine()!);
-System.Console.Write("Введите вторую точку второй прямой: ");
-double k2 = int.Parse(Console.ReadLine()!);
-
-double X = (b2 - b1) / (k1 - k2);
-
-double Y = k1 * X + b1;
-
-
-System.Console.WriteLine($"({X}; {Y})");
