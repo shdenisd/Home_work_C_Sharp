@@ -61,7 +61,7 @@ int count_el_greater_zero(int[] array)
 
 
 System.Console.Write("Введите числа через любой разделитель: ");
-string user_string = Console.ReadLine();
+string user_string = Console.ReadLine()!;
 
 int[] array_from_user_string = String_to_array(user_string);
 int gretater_than_zero = count_el_greater_zero(array_from_user_string);
