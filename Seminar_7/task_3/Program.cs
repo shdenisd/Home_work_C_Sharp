@@ -37,15 +37,13 @@ void AverageInDoubleArray(int[,] array)
 {
     double sum = 0;
     double[] allAverage = new double[array.GetLength(1)];
-    int counter = 0;
     for (int i = 0; i < array.GetLength(1); i++)
     {  
         for (int j = 0; j < array.GetLength(0); j++)
         {
             sum += array[j, i]; 
-            counter = j + 1;
         }
-        allAverage[i] = sum / counter;
+        allAverage[i] = sum / array.GetLength(0);
         sum = 0;
     }
     System.Console.Write("Среднее арифметическое каждого столбца: ");
