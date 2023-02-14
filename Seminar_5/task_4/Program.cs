@@ -1,4 +1,7 @@
-﻿Console.Clear();
+﻿// Написать метод сортировки пузырьком.
+
+
+Console.Clear();
 
 int[] get_random_array(int size, int minValue, int maxValue)
 {
