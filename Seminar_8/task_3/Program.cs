@@ -38,22 +38,19 @@ void MatrixMultiplication(int[,]array_1, int[,]array_2)
 {
     if (array_1.GetLength(1) != array_2.GetLength(0))
     {
-        System.Console.WriteLine("Данные матрицы нельзя умножиьб кол-во столбцов первой не равно кол-ву строк второй");
+        System.Console.WriteLine("Данные матрицы нельзя умножить кол-во столбцов первой не равно кол-ву строк второй");
         return;
     }
 
     int[,] multiplication = new int[array_1.GetLength(0), array_2.GetLength(1)];
-    int sum = 0;
     for (int i = 0; i < multiplication.GetLength(0); i++)
     {
         for (int j = 0; j < multiplication.GetLength(1); j++)
         {
            for (int k = 0; k < array_1.GetLength(1); k++)
            {
-                sum += array_1[i, k] * array_2[k, j];
+                multiplication[i, j] += array_1[i, k] * array_2[k, j];
            }
-           multiplication[i, j] = sum;
-           sum = 0;
         }
     }
     System.Console.WriteLine("Умножение матриц: ");
